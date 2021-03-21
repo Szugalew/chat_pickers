@@ -49,7 +49,13 @@ class EmojiPickerConfig {
   /// Determines the style given to the keyboard keys
 //  final ButtonMode buttonMode;
 
+  /// Callback function for when emoji is selected
+  ///
+  /// The function returns the selected [Emoji] as well as the [Category] from which it originated
+  Function(Emoji, Category) onEmojiSelected;
+
   EmojiPickerConfig({
+    @required this.onEmojiSelected,
     this.columns,
     this.bgColor,
     this.bgBarColor,
@@ -146,9 +152,9 @@ class ChatPickers extends HookWidget {
         indicatorColor: emojiPickerConfig.indicatorColor,
         onEmojiSelected: (emoji, category) {
           // setState(() {
-          chatController.text += emoji.emoji;
+          //chatController.text += emoji.emoji;
           //});
-
+          emojiPickerConfig.onEmojiSelected(emoji, category);
           // print(_messageText);
         },
       );
