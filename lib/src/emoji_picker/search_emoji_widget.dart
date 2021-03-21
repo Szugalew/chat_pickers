@@ -80,11 +80,11 @@ class _EmojiSearchViewState extends State<EmojiSearchView> {
               controller: _textController,
               decoration: InputDecoration(
                 hintText: "Search Emojies",
-                hintStyle: TextStyle(color: Colors.grey),
+  //              hintStyle: TextStyle(color: Colors.grey),
                 suffixIcon: IconButton(
                   icon: Icon(
                     Icons.keyboard,
-                    color: Colors.white,
+   //                 color: Colors.white,
                   ),
                   onPressed: widget.onClose,
                 ),
