@@ -189,6 +189,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
       print("adding emoji");
       setState(() {
         recentEmojis.insert(0, emoji.name);
+        if (recentEmojis.length > 100) {
+          recentEmojis.removeLast();
+        }
         prefs.setStringList(key, recentEmojis);
       });
     });
@@ -580,6 +583,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: smileyMap.keys.toList()[index],
                             emoji: smileyMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: smileyMap.keys.toList()[index],
+                        emoji: smileyMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -600,6 +606,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: smileyMap.keys.toList()[index],
                             emoji: smileyMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: smileyMap.keys.toList()[index],
+                        emoji: smileyMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -640,6 +649,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: animalMap.keys.toList()[index],
                             emoji: animalMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: animalMap.keys.toList()[index],
+                        emoji: animalMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -660,6 +672,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: animalMap.keys.toList()[index],
                             emoji: animalMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: animalMap.keys.toList()[index],
+                        emoji: animalMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -701,6 +716,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: foodMap.keys.toList()[index],
                             emoji: foodMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: foodMap.keys.toList()[index],
+                        emoji: foodMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -721,6 +739,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: foodMap.keys.toList()[index],
                             emoji: foodMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: foodMap.keys.toList()[index],
+                        emoji: foodMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -762,6 +783,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: travelMap.keys.toList()[index],
                             emoji: travelMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: travelMap.keys.toList()[index],
+                        emoji: travelMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -782,6 +806,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: travelMap.keys.toList()[index],
                             emoji: travelMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: travelMap.keys.toList()[index],
+                        emoji: travelMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -825,6 +852,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: activityMap.keys.toList()[index],
                             emoji: activityMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: activityMap.keys.toList()[index],
+                        emoji: activityMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -845,6 +875,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: activityMap.keys.toList()[index],
                             emoji: activityMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: activityMap.keys.toList()[index],
+                        emoji: activityMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -886,6 +919,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: objectMap.keys.toList()[index],
                             emoji: objectMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: objectMap.keys.toList()[index],
+                        emoji: objectMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -906,6 +942,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: objectMap.keys.toList()[index],
                             emoji: objectMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: objectMap.keys.toList()[index],
+                        emoji: objectMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -947,6 +986,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: symbolMap.keys.toList()[index],
                             emoji: symbolMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: symbolMap.keys.toList()[index],
+                        emoji: symbolMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -967,6 +1009,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: symbolMap.keys.toList()[index],
                             emoji: symbolMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: symbolMap.keys.toList()[index],
+                        emoji: symbolMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -1008,6 +1053,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: flagMap.keys.toList()[index],
                             emoji: flagMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: flagMap.keys.toList()[index],
+                        emoji: flagMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -1028,6 +1076,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                             name: flagMap.keys.toList()[index],
                             emoji: flagMap.values.toList()[index]),
                         selectedCategory);
+                    addRecentEmoji(Emoji(
+                        name: flagMap.keys.toList()[index],
+                        emoji: flagMap.values.toList()[index]));
                   },
                 ));
                 break;
@@ -1088,6 +1139,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                                 name: emojiName,
                                 emoji: allEmojis[allNames.indexOf(emojiName)]),
                             selectedCategory);
+                        // addRecentEmoji(Emoji(
+                        //   name: emojiName,
+                        // emoji: allEmojis[allNames.indexOf(emojiName)]));
                       },
                     ));
                     break;
@@ -1109,6 +1163,9 @@ class _EmojiPickerState extends State<EmojiPicker> {
                                 name: emojiName,
                                 emoji: allEmojis[allNames.indexOf(emojiName)]),
                             selectedCategory);
+                        //addRecentEmoji(Emoji(
+                        //  name: emojiName,
+                        //emoji: allEmojis[allNames.indexOf(emojiName)]));
                       },
                     ));
 
@@ -1262,6 +1319,8 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       return;
                     }
 
+                    FocusScope.of(context).unfocus();
+
                     pageController
                         .jumpToPage(initialPageNumberByCategory(categoryValue));
                   },
@@ -1285,6 +1344,8 @@ class _EmojiPickerState extends State<EmojiPicker> {
                       //Category.RECENT) {
                       return;
                     }
+
+                    FocusScope.of(context).unfocus();
 
                     pageController
                         .jumpToPage(initialPageNumberByCategory(categoryValue));
