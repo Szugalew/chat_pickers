@@ -10,7 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  http: ^0.12.1
+  #http: ^0.12.1
+  http: ^0.13.0
   giphy_client: ^0.2.0        # for giphy picker
   shared_preferences: ^0.5.7      # for keeping recent picked emojies
   material_design_icons_flutter: ^4.0.5345    # for icons
